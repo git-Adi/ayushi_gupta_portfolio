@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Wins Matter - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post-main">
+        <article class="blog-post">
+            <h1>Small Wins Matter</h1>
+            <div class="blog-content">
+                <p>If you're looking for some big, dramatic change in your life, let's be real: it's not going to come from one massive, heroic effort.</p>
+                <p>It's the little battles you win every day that build the real momentum.</p>
+                <p>Like actually getting up when your alarm rings.</p>
+                <p>Or making your bed even when you're running late.</p>
+                <p>Or sending that tough email you've been overthinking for days.</p>
+                <p>William McRaven said it best:</p>
+                <blockquote>"If you can't do the little things right, you will never do the big things right."</blockquote>
+                <p>And he's right.</p>
+                <p>We dream about landing dream jobs, writing bestsellers, running marathons... but none of that just happens. It's built one small, usually boring, totally unsexy step at a time.</p>
+                <p>Small wins prove something powerful: you can trust yourself.</p>
+                <p>Every time you show up, even in tiny ways, you're laying another brick in the foundation of your future self.</p>
+                <p>And here's where it gets interesting — after a while, you stop seeing yourself as someone who gives up easily.</p>
+                <p>You start seeing yourself as someone who fights for their goals.</p>
+                <p>Of course, you're not going to win every little battle. Some days, the snooze button will win. Some days, you'll ghost that cold shower.</p>
+                <p>That's okay.</p>
+                <p>This isn't about being perfect.</p>
+                <p>It's about trying again. And again.</p>
+                <p>Every time you choose to stand back up, even after slipping, you're teaching yourself something way bigger:</p>
+                <p>"I don't stay down."</p>
+                <p>So today, just pick one small win.</p>
+                <p>And tomorrow?</p>
+                <p>Pick another.</p>
+                <p>Stack enough of those, and one day you'll look back and realize...</p>
+                <p>Those small things?</p>
+                <p>They were never small after all.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

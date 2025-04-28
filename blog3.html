@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Push: Respect Your Body - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post-main">
+        <article class="blog-post">
+            <h1>Physical Push: Respect Your Body</h1>
+            <div class="blog-content">
+                <p>Pushing yourself is powerful — it's how we grow.</p>
+                <p>But real power?</p>
+                <p>It comes when you push from a place of respect.</p>
+                <p>Somewhere along the way, a lot of us started treating our bodies like something broken that needs constant fixing.</p>
+                <p>"Lose weight."</p>
+                <p>"Build more muscle."</p>
+                <p>"Look better."</p>
+                <p>Sure, goals are great. But man, it's way too easy to slip into treating yourself like you're never enough.</p>
+                <p>Here's the thing:</p>
+                <p>Your body has already gotten you through every bad day, every heartbreak, every adventure you didn't think you could survive.</p>
+                <p>It deserves gratitude, not judgment.</p>
+                <h2>Push — But Push With Kindness</h2>
+                <p>Pushing doesn't mean punishing.</p>
+                <p>Pushing means listening, respecting, and challenging yourself because you love your body — not because you hate it.</p>
+                <p>It looks like:</p>
+                <ul>
+                    <li>Doing that extra rep but knowing when real pain (not just discomfort) says "stop."</li>
+                    <li>Running hard but resting when your knees need a break.</li>
+                    <li>Wanting to get stronger while still celebrating every ounce of strength you already have.</li>
+                </ul>
+                <p>Rest isn't weakness.</p>
+                <p>It's wisdom.</p>
+                <p>Taking care of yourself isn't lazy.</p>
+                <p>It's strength in a different language.</p>
+                <p>Your body is not a battle to win.</p>
+                <p>It's your teammate.</p>
+                <p>Treat it like the miracle it is.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

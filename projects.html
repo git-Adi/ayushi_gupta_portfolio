@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Projects - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="AG">Ayushi Gupta</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="review.html">The Review</a></li>
+                <li><a href="cv.html">My CV</a></li>
+                <li><a href="experience.html">Work Experience</a></li>
+                <li><a href="education.html">Educational Journey</a></li>
+                <li><a href="projects.html">Past Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="projects-main">
+        <section class="projects-hero">
+            <h1>Past Projects</h1>
+            <p class="subtitle">Strategic consulting and market expansion initiatives</p>
+        </section>
+
+        <div class="projects-container">
+            <div class="project-card lynott-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2>Lynott Jewellery</h2>
+                        <span class="project-type">Strategic Optimization & Franchise Expansion</span>
+                    </div>
+                    <div class="project-body">
+                        <p>I collaborated with a bright group of people when I was at college to help mould the future of the well-known Irish business Lynott Jewellery. Our project had two main objectives:</p>
+                        <ul>
+                            <li>Enhance the business's internal operations</li>
+                            <li>Develop a strategy to support growth through franchising</li>
+                        </ul>
+                        <p>We spent time digging into their current structure, finding ways to make daily operations smoother, and reducing the pressure on the founder for every decision. We also mapped out a franchise strategy inspired by global brands like Pandora, including how Lynott could grow sustainably across Ireland and into Europe.</p>
+                        <p>Working on this project gave me real-world experience in strategic planning, financial forecasting, and understanding what it takes to help a business grow while keeping its identity strong.</p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="assets/lynott_pre.webp" alt="Lynott Jewellery" class="project-img">
+                </div>
+            </div>
+
+            
+
+            <div class="project-card happyco-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2>HappyCo</h2>
+                        <span class="project-type">EU Market Expansion Strategy</span>
+                    </div>
+                    <div class="project-body">
+                        <p>I was part of a team that built a full expansion strategy for HappyCo, a US-based Proptech company looking to grow into Europe.</p>
+                        <p>Finding out where and how HappyCo might have the greatest impact was our goal.</p>
+                        <p>After doing a thorough analysis of several markets, with a particular emphasis on Germany, France, the Netherlands, and Ireland, we developed a detailed strategy to assist them in their launch and expansion. This included everything, from selecting the best partners and pricing structures to modifying their software to comply with regional regulations (such as GDPR).</p>
+                        <p>We even suggested using Dublin as their European base to take advantage of its business-friendly environment.</p>
+                        <p>I learnt a lot about worldwide strategy, market research, and how to adapt tech goods to new markets from this assignment. It also made me truly appreciate the backroom labour that goes into expanding a business internationally.</p>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="assets/happyco_pre.jpeg" alt="HappyCo" class="project-img">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="theme-toggle" id="theme-toggle">
+        <span class="toggle-icon">☀️</span>
+    </button>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const toggleIcon = document.querySelector('.toggle-icon');
+        
+        // Check for saved theme preference or use default
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleIcon.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+        
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            toggleIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

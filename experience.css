@@ -1,0 +1,34 @@
+.experience-card {
+    background: url('/Users/adityaarya/Documents/ayushi_gupta/assets/wishbox.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.experience-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.experience-duration {
+    background-color: #8A9A5B; /* Soft sage green */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.experience-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-body li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}

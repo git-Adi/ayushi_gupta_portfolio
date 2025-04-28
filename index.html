@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushi Gupta - Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="experience.css">
+    <style>
+        /* Additional mobile menu styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                z-index: 1000;
+            }
+            
+            .hamburger span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                margin: 6px 0;
+                background-color: #333;
+                transition: all 0.3s ease;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                background-color: #fff;
+                text-align: center;
+                transition: all 0.3s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                padding: 20px 0;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            
+            [data-theme="dark"] .hamburger span {
+                background-color: #fff;
+            }
+            
+            [data-theme="dark"] nav ul {
+                background-color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <div class="intro-container">
+            <div class="intro-text">
+                <h1>Hey, I'm Ayushi!</h1>
+                <h2>Here's a little about me —</h2>
+                <p>I'm currently pursuing an MSc in Management Consultancy at UCD Michael Smurfit Graduate Business School.</p>
+                <p>I previously earned my Bachelor's degree in Journalism and Mass Communication from Jagannath International Management School in New Delhi.</p>
+                <p>Alongside my studies, I've worked in Public Relations and Content Writing, and I'm passionate about entrepreneurship, travel, and market trends.</p>
+            </div>
+            <div class="intro-image">
+                <img src="assets/homepage.jpeg" alt="UCD Smurfit Business School">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ayushi2002/" class="social-link" target="_blank">LinkedIn</a>
+                <!-- <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+        
+        // Mobile navigation functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+        
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                console.log('Menu toggled');
+            });
+            
+            // Close menu when clicking a nav link
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

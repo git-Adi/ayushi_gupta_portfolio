@@ -1,0 +1,227 @@
+/* Common Components */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem; /* Changed from left to right for better UX */
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.toggle-icon {
+    line-height: 1;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px; /* Reduced from 20px */
+    box-sizing: border-box;
+}
+
+.modal-content {
+    max-width: 85%; /* Reduced from 90% */
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Add these responsive component styles */
+
+/* Responsive navigation */
+/* Add this hamburger menu styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  nav ul.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .blog-image {
+    min-height: 160px;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .blog-content p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Work Experience Section Styling */
+.experience-item {
+    border-left: 3px solid #8A9A5B; /* Soft sage green instead of blue */
+    padding-left: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.experience-item h3 {
+    color: #333333; /* Dark charcoal for headings */
+    margin-bottom: 5px;
+}
+
+.experience-item .company {
+    color: #C87941; /* Warm terracotta for company names */
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.experience-item .date {
+    color: #666666; /* Medium gray for dates */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.experience-item .description {
+    color: #444444; /* Dark gray for description text */
+    line-height: 1.6;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #8A9A5B; /* Matching the border color */
+    border: 2px solid white;
+}
+
+/* Work Experience Header Styling */
+.experience-header {
+    background: linear-gradient(to bottom, rgba(138, 154, 91, 0.8), rgba(138, 154, 91, 0.6)); /* Soft sage green gradient */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.experience-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(138, 154, 91, 0.6), transparent);
+}
+
+.experience-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}

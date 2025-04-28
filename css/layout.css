@@ -1,0 +1,128 @@
+/* Navigation and Footer styles */
+nav {
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid var(--header-border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1100px; /* Reduced from 1200px */
+    margin: 0 auto;
+    padding: 1rem 1.5rem; /* Reduced horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: var(--nav-text);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-color);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1100px; /* Reduced from 1200px */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Reduced from 2rem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--link-color);
+}
+
+
+/* Add these responsive layout styles */
+
+/* Responsive container */
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Responsive grid system */
+@media (max-width: 768px) {
+  .grid, .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Adjust main content areas */
+  main {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Adjust section spacing */
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+
+/* Add or modify this in your layout.css */
+@media (max-width: 768px) {
+  main, .home-main, .review-main, .about-main, .contact-main, .education-main, .experience-main {
+    padding-top: 60px; /* Reduce top padding for mobile */
+  }
+}

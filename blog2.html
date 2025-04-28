@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Endurance: Break Your Limits - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post-main">
+        <article class="blog-post">
+            <h1>Mental Endurance: Break Your Limits</h1>
+            <div class="blog-content">
+                <p>You know that moment when everything inside you is screaming, "I can't!"</p>
+                <p>But something quieter, deeper inside whispers, "Just a little more"?</p>
+                <p>That's mental endurance.</p>
+                <p>People usually think of endurance as physical stuff — marathons, heavy lifting, climbing mountains.</p>
+                <p>But truth be told?</p>
+                <p>Real endurance starts in your mind.</p>
+                <p>Mental toughness is what separates the people who dream about things from the ones who make them happen.</p>
+                <p>And building it starts in those tiny, everyday battles:</p>
+                <ul>
+                    <li>When you're studying late and every cell in your body wants to just scroll Instagram instead.</li>
+                    <li>When you're working on something important and it feels like you're getting nowhere.</li>
+                    <li>When your goal feels so far away that quitting seems easier.</li>
+                </ul>
+                <p>Here's the secret:</p>
+                <p>Mental toughness isn't some superhero trait.</p>
+                <p>It's about learning to sit in discomfort a little longer than you want to.</p>
+                <h2>How To Actually Build Mental Endurance:</h2>
+                <h3>Get Comfortable Being Uncomfortable:</h3>
+                <p>Cold showers. Finishing boring tasks. Doing one extra rep at the gym.</p>
+                <p>Tiny discomforts now = major grit later.</p>
+                <h3>Talk To Yourself (Not Listen To Yourself):</h3>
+                <p>Don't let that lazy voice run the show. When it says, "This is too hard," answer back:</p>
+                <p>"I'm tougher than I feel."</p>
+                <h3>Celebrate Tiny Wins:</h3>
+                <p>Studied for 30 minutes instead of quitting at 10?</p>
+                <p>Stuck to your early wake-up goal for a week?</p>
+                <p>That's legendary. Celebrate it.</p>
+                <h2>Why Bother with All This?</h2>
+                <p>Because everything truly worth having sits just on the other side of wanting to quit.</p>
+                <p>When you build mental endurance, you're building self-trust.</p>
+                <p>And when you trust yourself to keep going?</p>
+                <p>There's nothing you can't do.</p>
+                <p>So today, try this:</p>
+                <p>Push just a tiny bit beyond your comfort zone.</p>
+                <p>Stay one minute longer. Try one more time.</p>
+                <p>That's how you break your limits — not all at once, but one small, gritty win at a time.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

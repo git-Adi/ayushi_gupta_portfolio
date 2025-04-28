@@ -1,0 +1,1184 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add these CSS variables at the top of your file */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --nav-bg: #333;
+    --card-bg: #fff;
+    --footer-bg: #2c3e50;
+    --link-color: #8A9A5B; /* Sage green for consistency */
+    --shadow-color: rgba(0,0,0,0.1);
+    --nav-text: #ffffff;
+    --nav-link-color: #ffffff;
+    --heading-color: #ffffff;
+    --header-border: #000000;
+    --spacing-large: 3rem;
+    --spacing-medium: 1.5rem;
+    --spacing-small: 0.8rem;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f9f9f9;
+    --nav-bg: #ffffff;
+    --card-bg: #2c2c2c;
+    --footer-bg: #1a1a1a;
+    --link-color: #9CAF80; /* Lighter sage green for better visibility in dark mode */
+    --shadow-color: rgba(0,0,0,0.3);
+    --nav-text: #333;
+    --nav-link-color: #333;
+    --heading-color: #333;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+    background-color: var(--nav-bg);
+}
+
+nav a {
+    color: var(--text-color);
+}
+
+.post-preview {
+    background: var(--card-bg);
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+/* Add the theme toggle button styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.toggle-icon {
+    line-height: 1;
+}
+
+/* Add responsive styles for the toggle button */
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 1rem;
+        left: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Navigation */
+nav {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--header-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: var(--header-text);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-color);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Update the nav styles */
+nav {
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid var(--header-border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Update the CSS variables */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --nav-bg: #333;  /* Dark nav in light mode */
+    --card-bg: #fff;
+    --footer-bg: #2c3e50;
+    --link-color: #8A9A5B; /* Sage green for consistency */
+    --shadow-color: rgba(0,0,0,0.1);
+    --nav-text: #ffffff;  /* White text in light mode */
+    --nav-link-color: #ffffff; /* White navigation links in light mode */
+}
+
+/* Add this to your CSS file */
+[data-theme="dark"] .AG {
+    color: #000000 !important; /* Black text specifically for Ayushi Gupta in dark mode */
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f9f9f9;
+    --nav-bg: #ffffff;
+    --card-bg: #2c2c2c;
+    --footer-bg: #1a1a1a;
+    --link-color: #9CAF80; /* Lighter sage green for better visibility in dark mode */
+    --shadow-color: rgba(0,0,0,0.3);
+    --nav-text: #333;
+    --nav-link-color: #333;
+    --heading-color: #333;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+    background-color: var(--nav-bg);
+}
+
+nav a {
+    color: var(--text-color);
+}
+
+.post-preview {
+    background: var(--card-bg);
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+/* Add the theme toggle button styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.toggle-icon {
+    line-height: 1;
+}
+
+/* Add responsive styles for the toggle button */
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 1rem;
+        left: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Navigation */
+nav {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--header-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: var(--header-text);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-color);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Update the nav styles */
+nav {
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid var(--header-border);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: var(--nav-text);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.intro {
+    margin: 3rem 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.latest-posts {
+    margin: 4rem 0;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-preview {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.post-preview:hover {
+    transform: translateY(-5px);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        z-index: 100;
+        /* Make hamburger visible */
+        background-color: var(--link-color);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* CV Page Specific Styles */
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow-x: hidden;
+}
+
+/* Add this to the body to prevent horizontal scrollbar */
+body {
+    overflow-x: hidden;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #c4b5a5;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #a69783;
+    transform: translateY(-2px);
+}
+
+.cv-preview {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Education Page Styles */
+.education-main {
+    padding-top: 80px;
+    background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+.education-hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.education-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.education-hero .subtitle {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.education-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.education-tile {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-tile:hover {
+    transform: translateY(-10px);
+}
+
+.education-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, #e0e6ed 0%, #d0d8e1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8795a1;
+    font-size: 1.2rem;
+}
+
+.education-content {
+    padding: 1.5rem;
+}
+
+/* Update heading styles */
+.education-content h2 {
+    color: var(--text-color); /* Use the theme variable instead of direct white color */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Update the institution name specific styles */
+.institution-name {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.education-content h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.education-date {
+    font-size: 1.1rem;
+    color: #7a845b; /* Changed from #3498db to sage green */
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.education-description {
+    color: #34495e;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .education-hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .education-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .education-content {
+        padding: 1.2rem;
+    }
+    
+    .education-container {
+        padding: 0 1rem;
+    }
+}
+
+.experience-hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(95, 112, 68, 0.85), rgba(113, 121, 89, 0.85)), url('https://images.unsplash.com/photo-1497215842964-222b430dc094?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80'); /* Changed from blue gradient to sage green gradient */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, #f6f9fc, transparent);
+}
+
+.experience-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.experience-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.experience-card {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('assets/wishbox.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Add this new class for Leica experience card */
+.leica-card {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('assets/leic.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+}
+
+.experience-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.experience-header h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.experience-header h3 {
+    font-size: 1.4rem;
+    color: #8A9A5B; /* Changed from #3498db to sage green */
+    font-weight: 500;
+}
+
+.experience-duration {
+    display: inline-block;
+    background: linear-gradient(135deg, #8A9A5B, #5F7044); /* Changed from blue gradient to sage green gradient */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-body {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.experience-body ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.experience-body li {
+    padding: 0.8rem 0;
+    position: relative;
+    padding-left: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.experience-body li:hover {
+    transform: translateX(5px);
+}
+
+.experience-body li:before {
+    content: "→";
+    color: #8A9A5B; /* Changed from #3498db to sage green */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.experience-impact {
+    background: linear-gradient(135deg, #5F7044, #6f7756); /* Changed from blue gradient to sage green gradient */
+    color: white;
+    padding: 4rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5rem 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.experience-impact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.experience-impact p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .experience-card {
+        padding: 1.2rem;
+    }
+    
+    .experience-container {
+        padding: 0 1rem;
+    }
+    
+    .experience-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .experience-impact {
+        padding: 2.5rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .experience-impact h2 {
+        font-size: 2rem;
+    }
+    
+    .experience-impact p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Update heading styles */
+nav h1, 
+.hero h2,
+.hero-section h1,
+.education-hero h1,
+.experience-hero h1 {
+    color: #ffffff; /* Keep these white as they're on dark backgrounds */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.education-content h2,
+.institution-name {
+    color: #2c3e50 !important; /* Force dark color for education content */
+    text-shadow: none;
+}
+
+.education-tile {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .education-content h2,
+[data-theme="dark"] .institution-name {
+    color: var(--text-color) !important; /* Use theme text color in dark mode */
+}
+
+/* Review Page Styles */
+.review-main {
+
+    padding-top: 80px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.review-hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.review-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.review-hero .subtitle {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.blog-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.blog-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.read-more-link {
+    display: inline-block;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: #2980b9;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .blog-card {
+    background: var(--card-bg);
+}
+
+[data-theme="dark"] .blog-content h2 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .blog-content p {
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .review-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .blog-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .blog-content {
+        padding: 1.2rem;
+    }
+}
+
+/* Blog Post Styles */
+.blog-post-main {
+    padding-top: 80px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+/* Home Page Styles */
+.home-main {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.intro-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.intro-text {
+    color: var(--text-color);
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.intro-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* Responsive Design for Home Page */
+@media (max-width: 768px) {
+    .intro-container {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1.1rem;
+    }
+}
+
+.education-description h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.education-description ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.education-description li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.education-description li:before {
+    content: "•";
+    color: var(--link-color);
+    position: absolute;
+    left: 0;
+}
+
+.education-description p {
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.education-content h3 {
+    color: var(--link-color);
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.blog-post h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.blog-post .blog-content {
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.blog-post p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post blockquote {
+    border-left: 4px solid var(--link-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-post {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+
+    .blog-post h1 {
+        font-size: 2rem;
+    }
+
+    .blog-post .blog-content {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Book Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Same header as index.html -->
+    
+    <main class="blog-main">
+        <h1>Book Reviews & Reading Journey</h1>
+        
+        <article class="blog-post" id="post1">
+            <h2>The Power of Reading</h2>
+            <div class="post-meta">
+                <span class="date">January 15, 2024</span>
+                <span class="category">Personal Growth</span>
+            </div>
+            <div class="post-content">
+                <p>When I first started this journey, I never imagined how much impact reading would have on my life. Each book has opened new doors of understanding and perspective...</p>
+                <!-- Add more paragraphs as needed -->
+            </div>
+        </article>
+        
+        <!-- Add more blog posts -->
+    </main>
+    
+    <!-- Same footer as index.html -->
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

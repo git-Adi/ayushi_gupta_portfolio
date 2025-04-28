@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Review - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom hero image override */
+        .review-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="review-main">
+        <section class="review-hero">
+            <h1>The Review</h1>
+            <p class="subtitle">Exploring Life's Lessons Through Words</p>
+        </section>
+
+        <div class="blog-grid">
+            <!-- First Row -->
+            <article class="blog-card">
+                <div class="blog-image" style="background-image: url('data:image/png;base64,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')"></div>
+                <div class="blog-content">
+                    <h2>Small Wins Matter</h2>
+                    <p>If you're looking for some big, dramatic change in your life, let's be real: it's not going to come from one massive, heroic effort...</p>
+                    <a href="blog1.html" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlTxPTxkVtJ9gC06Gpx5oZGvtmEG3jDyIc5Q&s')"></div>
+                <div class="blog-content">
+                    <h2>Mental Endurance: Break Your Limits</h2>
+                    <p>You know that moment when everything inside you is screaming, "I can't!" But something quieter, deeper inside whispers, "Just a little more"?...</p>
+                    <a href="blog2.html" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <!-- Second Row -->
+            <article class="blog-card">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="blog-content">
+                    <h2>Physical Push: Respect Your Body</h2>
+                    <p>Pushing yourself is powerful — it's how we grow. But real power? It comes when you push from a place of respect...</p>
+                    <a href="blog3.html" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="blog-content">
+                    <h2>Emotional Bravery: Express, Feel, Act</h2>
+                    <p>Real bravery doesn't always look like running into burning buildings. Sometimes it looks like speaking your truth...</p>
+                    <a href="blog4.html" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <!-- Bottom Row -->
+            <article class="blog-card full-width">
+                <div class="blog-image" style="background-image: url('https://files09.oaiusercontent.com/file-9dvLJjYQyNTH1xu4LR67Wp?se=2025-04-27T22%3A29%3A53Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D97c3bdfd-3cee-4344-83d2-064696b5e263.webp&sig=4D5t5QOQPH22aQHxA9VPIeWyK9OSOXEFO3FlpYxWaPw%3D')"></div>
+                <div class="blog-content">
+                    <h2>Transform Your Life, One Day at a Time: The 30-Day Challenge</h2>
+                    <p>Change feels scary because we think we need to flip our lives upside down overnight. But here's the truth: Real change is boring...</p>
+                    <a href="blog5.html" class="read-more-link">Read More</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ayushi2002/" class="social-link" target="_blank">LinkedIn</a>
+                <!-- <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

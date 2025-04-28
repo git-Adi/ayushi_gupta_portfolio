@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Bravery: Express, Feel, Act - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post-main">
+        <article class="blog-post">
+            <h1>Emotional Bravery: Express, Feel, Act</h1>
+            <div class="blog-content">
+                <p>Real bravery doesn't always look like running into burning buildings.</p>
+                <p>Sometimes it looks like speaking your truth.</p>
+                <p>Or sitting with heartbreak instead of numbing out.</p>
+                <p>Or admitting to yourself that you're scared — and still choosing to show up anyway.</p>
+                <h2>3 Big Pieces of Emotional Bravery:</h2>
+                <h3>Speak Your Truth</h3>
+                <p>Even if your voice shakes.</p>
+                <p>Even if people won't get it.</p>
+                <p>You matter. Your feelings matter. Your truth matters.</p>
+                <h3>Feel It All</h3>
+                <p>Sadness, anger, fear — it's not weak to feel them.</p>
+                <p>It's human.</p>
+                <p>Sitting with your emotions (instead of running from them) is pure, unfiltered courage.</p>
+                <h3>Own Your Story</h3>
+                <p>The messy parts. The broken bits.</p>
+                <p>Not just the shiny, Instagram-worthy wins.</p>
+                <p>Owning all of it sets you free.</p>
+                <p>Emotional bravery isn't glamorous.</p>
+                <p>But it's real.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Journey - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom hero image override */
+        .education-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://www.avanse.com/blogs/images/blogs-migration-159.jpg') !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="education-main">
+        <div class="education-hero">
+            <h1>Educational Journey</h1>
+            <p class="subtitle">Building knowledge, shaping futures</p>
+        </div>
+
+        <div class="education-container">
+            <!-- MSc Education -->
+            <div class="education-tile">
+                <div class="education-image" style="background-image: url('assets/ucd.jpeg')" onclick="openModal('assets/ucd.jpeg')"></div>
+                <div class="education-content">
+                    <h2 class="institution-name">UCD Smurfit Graduate Business School</h2>
+                    <p class="education-date">2024 - 2025</p>
+                    <h3>MSc in Management Consultancy</h3>
+                    <div class="education-description">
+                        <p>Dublin, Ireland</p>
+                        <h4>Key Modules:</h4>
+                        <ul>
+                            <li>Project Management</li>
+                            <li>Competitive and Corporate Strategy</li>
+                            <li>Consulting Techniques</li>
+                            <li>Organisational Behaviour and Consulting</li>
+                        </ul>
+                        <h4>Key Project:</h4>
+                        <p>Student Consultant at Ivy Capital Partners researching and analyzing the 'Launch of HappyCo' in the European Market</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bachelor's Education -->
+            <div class="education-tile">
+                <div class="education-image" style="background-image: url('https://yt3.googleusercontent.com/-oDIUnymYbWE4BRQPldi-Ee76EJeWtP6vyuhuPAwKlkRtYsx8_7PTGB5qyuK_OVm_0PwpmPnuA=s900-c-k-c0x00ffffff-no-rj')" onclick="openModal('assets/jims_image.jpg')"></div>
+                <div class="education-content">
+                    <h2 class="institution-name">Jagannath International Management School (GGSIPU)</h2>
+                    <p class="education-date">2014 - 2018</p>
+                    <h3>Bachelor's in Journalism and Mass Communication</h3>
+                    <div class="education-description">
+                        <p>New Delhi, India</p>
+                        <p>Grade: 9.1 (1:1 Honours)</p>
+                        <h4>Key Modules:</h4>
+                        <ul>
+                            <li>Public Relations</li>
+                            <li>Print Journalism</li>
+                            <li>Advertising</li>
+                            <li>Media Management</li>
+                            <li>Media Law and Ethics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ayushi2002/" class="social-link" target="_blank">LinkedIn</a>
+                <!-- <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    
+        .education-image {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+
+        // Modal functionality
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

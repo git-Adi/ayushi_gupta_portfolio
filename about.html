@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Book Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Same header as index.html -->
+    
+    <main class="about-main">
+        <section class="about-content">
+            <h1>About Me</h1>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-image">
+            <div class="about-text">
+                <p>Hello! I'm a passionate reader who discovered the joy of books later in life. My journey from struggling reader to book enthusiast has taught me that it's never too late to fall in love with reading.</p>
+                <p>Through this blog, I hope to share my experiences, reviews, and insights with others who might be on a similar journey. Whether you're a seasoned reader or just starting out, there's always something new to discover in the world of books.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ayushi2002/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Same footer as index.html -->
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

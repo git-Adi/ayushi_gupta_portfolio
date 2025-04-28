@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Life, One Day at a Time: The 30-Day Challenge - Ayushi Gupta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="AG">Ayushi Gupta</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post-main">
+        <article class="blog-post">
+            <h1>Transform Your Life, One Day at a Time: The 30-Day Challenge</h1>
+            <div class="blog-content">
+                <p>Change feels scary because we think we need to flip our lives upside down overnight. But here's the truth: Real change is boring. Its tiny actions stacked up, one after the other.</p>
+                <p>That's the beauty of the 30-Day Challenge.</p>
+                <h2>Why 30 Days?</h2>
+                <p>Because 30 days is long enough to see change... but short enough that your brain doesn't panic. It's not forever. It's just one month of you saying, "Hey, I'm serious about myself."</p>
+                <h2>Some Simple 30-Day Challenge Ideas:</h2>
+                <ul>
+                    <li>Wake up at 6AM every day.</li>
+                    <li>No social media scrolling unless it's work-related.</li>
+                    <li>Stretch or move your body for 20 minutes a day.</li>
+                    <li>Write one page daily — anything.</li>
+                    <li>Read 10 pages of a real book.</li>
+                    <li>Compliment one stranger a day.</li>
+                    <li>Drink more water than you think you need.</li>
+                    <li>Meditate 5 minutes — even badly.</li>
+                </ul>
+                <p>Pick one. Stick to it. Consistency > Perfection.</p>
+                <h2>What Will Happen?</h2>
+                <p>Day 5? You'll bargain with yourself.</p>
+                <p>Day 12? You'll want to quit.</p>
+                <p>Day 20? You'll realize you've come too far.</p>
+                <p>Day 30? You'll look in the mirror and think: "Wow. I'm not the same person who started this."</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="experience.css"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">Ayushi Gupta</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="review.html">The Review</a></li>
+                    <li><a href="cv.html">My CV</a></li>
+                    <li><a href="experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Educational Journey</a></li>
+                    <li><a href="projects.html">Past Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="experience-main">
+        <div class="experience-hero">
+            <h1>My Experience in Communications & Content Writing</h1>
+            <div class="intro-text">
+                <p>Having a background in journalism and a talent for strategic communication, I've had the chance to work in positions that have encouraged both my analytical and creative sides. My background includes everything from developing digital storytelling to constructing media campaigns, all of which have improved my understanding of how to use connections and words to make a lasting impression.</p>
+            </div>
+        </div>
+
+        <div class="experience-container">
+            <!-- Wishbox Studio Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h2>Wishbox Studio</h2>
+                    <span class="experience-duration">Sept 2023 – April 2024</span>
+                    <h3>Public Relations Intern</h3>
+                </div>
+                <div class="experience-body">
+                    <p>I was at the frontline of brand communication and media interaction in New Delhi, where I:</p>
+                    <ul>
+                        <li>Established and maintained solid connections with journalists, influencers, and media outlets</li>
+                        <li>Created powerful press releases and pitches for clear brand communication</li>
+                        <li>Planned and executed client interviews and press conferences</li>
+                        <li>Monitored media coverage and analyzed competitor activities</li>
+                        <li>Enhanced strategic planning abilities to align brand narratives with media trends</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Leica Camera Experience -->
+            <div class="experience-card leica-card">
+                <div class="experience-header">
+                    <h2>Leica Camera India</h2>
+                    <span class="experience-duration">July 2022 – Sept 2022</span>
+                    <h3>Content Writer</h3>
+                </div>
+                <div class="experience-body">
+                    <p>Explored the artistic aspect of communication through:</p>
+                    <ul>
+                        <li>Creating captivating, technically accurate content for Leica's camera line</li>
+                        <li>Collaborating with brand managers for strategic content development</li>
+                        <li>Producing targeted social media content</li>
+                        <li>Developing unified brand voice across platforms</li>
+                        <li>Improving brand's online visibility and audience engagement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Impact Statement -->
+            <div class="experience-impact">
+                <h2>Professional Impact</h2>
+                <p>In addition to improving my writing and communication abilities, these experiences have expanded my understanding of the value of purposeful, well-considered storytelling as a strategy for brand success.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Ayushi Gupta. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ayushi2002/" class="social-link" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="darkModeToggle" class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+    
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleIcon.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

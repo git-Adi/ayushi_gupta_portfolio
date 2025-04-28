@@ -1,0 +1,96 @@
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  /* Hamburger menu styling */
+  .hamburger {
+    display: block !important;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Navigation menu styling */
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    position: relative;
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+    z-index: 999;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    display: flex;
+  }
+  
+  nav ul.active {
+    left: 0;
+  }
+  
+  nav ul li {
+    margin: 15px 0;
+  }
+  
+  /* Dark mode support */
+  [data-theme="dark"] .hamburger span {
+    background-color: #fff;
+  }
+  
+  [data-theme="dark"] nav ul {
+    background-color: #333;
+  }
+  
+  /* Adjust main content padding */
+  main {
+    padding-top: 70px;
+  }
+}
+
+/* Additional styles for extra small screens */
+@media (max-width: 480px) {
+  .hamburger {
+    top: 15px;
+    right: 15px;
+  }
+  
+  nav ul {
+    top: 50px;
+  }
+  
+  .nav-container h1 {
+    font-size: 1.5rem;
+  }
+}
